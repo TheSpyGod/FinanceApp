@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FinanceApp"
+             x:Class="FinanceApp.Manage"
+             Title=""
+             BackgroundColor="#55AAFFFF">
+    <ContentPage.BindingContext>
+        <local:DatabaseLogic/>
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Entry x:Name="Company" Placeholder="Company Name" TextTransform="Uppercase" PlaceholderColor="#fffffff0" TextColor="#ffffff" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="350, 0, 50, 600"/>
+        <Picker x:Name="BusinessType" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="350, 0, 50,500">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Income</x:String>
+                    <x:String>Expense</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Entry x:Name="Due" Placeholder="Due Price" Keyboard="Numeric" PlaceholderColor="#fffffff0" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="350, 0, 50, 400"/>
+         <Picker x:Name="Currency" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="150, 0, 50,500">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>PLN</x:String>
+                    <x:String>EUR</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+
+        <Button Text="Add" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnFetch" WidthRequest="65" HeightRequest="40" Margin="200,0,0,250" Clicked="BtnFetch_Clicked"/>
+        <Button Text="Delete" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnDelete" WidthRequest="85" HeightRequest="40" Margin="0,0,0,250" Clicked="BtnDelete_Clicked"/>
+        <Button Text="Update" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnUpdate" WidthRequest="85" HeightRequest="40" Margin="400,0,0,250" Clicked="BtnUpdate_Clicked"/>
+
+        <StackLayout Margin="0, 500, 0, 0">
+            <RadioButton x:Name="PLNtoEUR" CheckedChanged="PLNtoEUR_CheckedChanged" Content="EUR" GroupName="CurrencyEx_XAML"/>
+            <RadioButton x:Name="EURtoPLN" CheckedChanged="PLNtoEUR_CheckedChanged" Content="PLN" GroupName="CurrencyEx_XAML"/>
+        </StackLayout>
+        
+        <ListView x:Name="Lv"  ItemsSource="{Binding FinanceData}" Margin="10" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" WidthRequest="500" HorizontalOptions="EndAndExpand"  VerticalOptions="Start">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame Background="#000000ff">
+                        <HorizontalStackLayout Spacing="8">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding company}" FontSize="25"/>
+                                <Label Text="{Binding due}" FontSize="25"/>
+                                <Label Text="{Binding businessType}" FontSize="25"/>
+                                <Label Text="{Binding currency}" FontSize="25"/>
+                                <Label Text="{Binding date}" FontSize="25"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>    
+                    </Frame>
+                 </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </Grid>
+</ContentPage>
