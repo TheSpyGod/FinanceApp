@@ -4,9 +4,9 @@
              xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
              x:Class="FinanceApp.MainPage"
              Title="">
-    <StackLayout>
-        <micro:ChartView x:Name="chartViewDonut" HeightRequest="300" MaximumHeightRequest="300" MaximumWidthRequest="600"/>
-        <micro:ChartView x:Name="chartViewLine" HeightRequest="300" MaximumHeightRequest="300" MaximumWidthRequest="600"/>
+    <StackLayout Margin="0,0,800,0" VerticalOptions="FillAndExpand" >
+        <micro:ChartView x:Name="chartViewDonut" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <micro:ChartView x:Name="chartViewLine" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
     </StackLayout>
 
 

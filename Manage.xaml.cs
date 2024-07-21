@@ -5,6 +5,8 @@ using System.Reflection;
 using MongoDB.Driver;
 using Microsoft.Maui.Graphics.Text;
 using MongoDB.Bson;
+using System.Globalization;
+using System.Collections.Specialized;
 
 namespace FinanceApp;
 
@@ -13,23 +15,37 @@ public partial class Manage : ContentPage
 	private DatabaseLogic logic;
 	private const double ExchangeRatePLN = 0.23;
 	private const double ExchangeRateEUR = 4.30;
-		public Manage()
+	/// <summary>
+	/// This class has two primary functions:
+	/// a. Manipulates database entries from the connected DatabaseLogic instance.
+	///    Two collections are created within DatabaseLogic: a user-modifiable one and a copy of it.
+	///    It compares these collections, generates lists of items for removal and addition, and modifies the database accordingly.
+	/// b. Exchanges currency based on the selected radio button.
+	///    A copy of FinanceData (the user-modifiable collection) is created in DatabaseLogic.
+	///    The due amount of each transaction is converted to the desired currency without altering the original collection.
+	///    The converted collection is displayed in the ListView instead of the original FinanceData.
+	/// </summary>
+	public Manage()
 	{
 		InitializeComponent();
-		if (logic == null) logic = new DatabaseLogic(); this.BindingContext = logic;
+		logic = DatabaseLogic.Instance;
+		this.BindingContext = logic;
+		logic.FinanceData.CollectionChanged += OnFinanceDataChanged;
 	}
 
 	private void BtnFetch_Clicked(object sender, EventArgs e)
 	{
-		if (BusinessType.SelectedItem != null && Due.Text != "" && Company.Text != null) 
+		if (BusinessType.SelectedItem != null && !string.IsNullOrEmpty(Due.Text) && !string.IsNullOrEmpty(Company.Text)) 
 		{
 			var lv_Company = Company.Text;
 			var lv_Due = 0;
 
 			if (int.TryParse(Due.Text, out lv_Due) && !string.IsNullOrEmpty(Due.Text));
+
 			var lv_BusinessType = BusinessType.SelectedItem.ToString();
 			var lv_Currency = Currency.SelectedItem.ToString();
-			var lv_Date = DateTime.Now;
+			var lv_Date = DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
 			logic.FinanceData.Add(new FinanceModel
 			{
 				due = lv_Due,
@@ -38,32 +54,32 @@ public partial class Manage : ContentPage
 				currency = lv_Currency,
 				date = lv_Date
 			});
+			Lv.ItemsSource = null;
 			Lv.ItemsSource = logic.FinanceData;
 			Company.Text = "";
 			Due.Text = "";
+			MessagingCenter.Send(this, "UpdateGraphs");
 		}
 	}
 	private void BtnDelete_Clicked(object sender, EventArgs e)
 	{
-		var selection = Lv.SelectedItem as FinanceModel;		
-		if (selection != null)
+		if (Lv.SelectedItem is FinanceModel selection)
 		{
 			logic.FinanceData.Remove(selection); 
-			Lv.ItemsSource = null; 	
-			Lv.ItemsSource = logic.FinanceData; 
+			MessagingCenter.Send(this, "UpdateGraphs");
+
 		}
 	}
 
 	private async void BtnUpdate_Clicked(object sender, EventArgs e)
 	{
 		await logic.UpdateDatabase();
+		MessagingCenter.Send(this, "UpdateGraphs");
 	}
 
 	private void CurrencyExchange(string CurrencyState)
 	{
-		Lv.ItemsSource = logic.FinanceData;
-		if (logic.CurrencyEx.Count != 0) logic.CurrencyEx.Clear(); 		
-		else logic.CurrencyEx = new ObservableCollection<FinanceModel>();
+		logic.CurrencyEx.Clear(); 		
 
 		foreach (var item in logic.FinanceData)
 		{
@@ -89,12 +105,16 @@ public partial class Manage : ContentPage
 
 			logic.CurrencyEx.Add(newModel);
 		}
+		Lv.ItemsSource = null;
 		Lv.ItemsSource = logic.CurrencyEx;
 	}
 
 	private void PLNtoEUR_CheckedChanged(object sender, CheckedChangedEventArgs e)
 	{
-		if (PLNtoEUR.IsChecked == true) CurrencyExchange("EUR");
-		else CurrencyExchange("PLN");
+		CurrencyExchange(PLNtoEUR.IsChecked ? "EUR" : "PLN");
+	}
+	private void OnFinanceDataChanged(object sender, NotifyCollectionChangedEventArgs e)
+	{
+		MessagingCenter.Send(this, "UpdateGraphs");
 	}
 }

@@ -17,6 +17,6 @@ namespace FinanceApp
 		public double due { get; set; }
 		public string businessType { get; set; }
 		public string currency {  get; set; }
-		public DateTime? date { get; set; }
+		public string date { get; set; }
 	}
 }

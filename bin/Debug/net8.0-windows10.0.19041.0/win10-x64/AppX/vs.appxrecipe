@@ -29,7 +29,7 @@
     <AppXManifest Include="D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-18T20:04:13.807</Modified>
+      <Modified>2024-07-20T20:47:59.267</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.dll">
       <PackagePath>FinanceApp.dll</PackagePath>
-      <Modified>2024-07-18T20:04:13.505</Modified>
+      <Modified>2024-07-20T20:47:58.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FinanceApp.exe</PackagePath>
-      <Modified>2024-07-18T20:04:13.578</Modified>
+      <Modified>2024-07-20T20:47:58.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

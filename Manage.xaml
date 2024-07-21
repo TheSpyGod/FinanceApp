@@ -39,7 +39,7 @@
         <Button Text="Delete" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnDelete" WidthRequest="85" HeightRequest="40" Margin="0,0,0,250" Clicked="BtnDelete_Clicked"/>
         <Button Text="Update" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnUpdate" WidthRequest="85" HeightRequest="40" Margin="400,0,0,250" Clicked="BtnUpdate_Clicked"/>
 
-        <StackLayout Margin="0, 500, 0, 0">
+        <StackLayout Margin="550, 50, 0, 0">
             <RadioButton x:Name="PLNtoEUR" CheckedChanged="PLNtoEUR_CheckedChanged" Content="EUR" GroupName="CurrencyEx_XAML"/>
             <RadioButton x:Name="EURtoPLN" CheckedChanged="PLNtoEUR_CheckedChanged" Content="PLN" GroupName="CurrencyEx_XAML"/>
         </StackLayout>

@@ -2,51 +2,32 @@
 using Microcharts;
 using SkiaSharp;
 using System.Linq;
+using System.Collections.Specialized;
 
 namespace FinanceApp
 {
 	public partial class MainPage : ContentPage
 	{
 		private DatabaseLogic logic;
-		private ChartEntry[] entries;
+		private bool isUpdating = false;
+		private List<ChartEntry> entries;
 		public ObservableCollection<FinanceModel> SummationOfDue { get; private set; } = new ObservableCollection<FinanceModel>();
 		private static ThreadLocal<Random> randomWrapper = new ThreadLocal<Random>(() => new Random());
 		public MainPage()
 		{
 			InitializeComponent();
+			logic = DatabaseLogic.Instance;
 			InitializeAsync();
-		
 		}
-
+		protected override async void OnAppearing()
+		{
+			base.OnAppearing();
+			UpdateGraphs();
+		}
 		private async Task InitializeAsync()
 		{
-			if (logic == null) logic = new DatabaseLogic();
-			if (logic.FinanceData.Count < 1) await logic.FetchData();
-			if (SummationOfDue == null || SummationOfDue.Count < 1) SumOfDue();
-			if (entries == null)	entries = new ChartEntry[SummationOfDue.Count];
-
-			try
-			{
-				ConvertToEntries();
-			
-			chartViewDonut.Chart = new DonutChart
-			{
-				IsAnimated = true,
-				Entries = entries
-			};
-			chartViewLine.Chart = new LineChart
-			{
-				IsAnimated = true,
-				Entries = entries
-			};
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine($"Error in ConvertToEntries: {ex.Message}");
-			}
-
+			if (logic.FinanceData.Count == 0) await logic.FetchData();
 		}
-
 		private SKColor GetRandomColor()
 		{
 			byte[] rgb = new byte[3];
@@ -54,7 +35,7 @@ namespace FinanceApp
 			return new SKColor(rgb[0], rgb[1], rgb[2]);
 		}
 
-		private void SumOfDue()
+		public void SumOfDue()
 		{
 			var groupedData = logic.FinanceData
 					.GroupBy(item => item.company)
@@ -64,24 +45,57 @@ namespace FinanceApp
 						due = group.Sum(item => item.due),
 						businessType = group.First().businessType 	
 					});
-
-			SummationOfDue = new ObservableCollection<FinanceModel>(groupedData);
+			SummationOfDue.Clear();
+			foreach (var item in groupedData)
+			{
+				SummationOfDue.Add(item);
+			}
 		}
 
 		private void ConvertToEntries()
 		{
-				for (int i = 0; i < SummationOfDue.Count; i++)
+			if (entries == null)
+			{
+				entries = new List<ChartEntry>();
+			}
+			else
+			{
+				entries.Clear();
+			}
+			foreach (var item in SummationOfDue)
 				{
 					SKColor color = GetRandomColor();
-					var item = SummationOfDue[i];
-					entries[i] = new ChartEntry((float)item.due) {
+					entries.Add(new ChartEntry((float)item.due) {
 						Label = item.company,
 						ValueLabel = item.due.ToString(),
 						Color = color,
-					};
+					});
 				}
 		}
 
+		public void UpdateGraphs()
+		{
+			if (isUpdating) return;
 
+			isUpdating = true;
+			SumOfDue();
+			ConvertToEntries();
+
+			chartViewDonut.Chart = new DonutChart
+			{
+				IsAnimated = true,
+				AnimationDuration = TimeSpan.FromSeconds(2),
+				Entries = entries
+			};
+
+			chartViewLine.Chart = new LineChart
+			{
+				IsAnimated = true,
+				AnimationDuration = TimeSpan.FromSeconds(2),
+				Entries = entries
+			};
+
+			isUpdating = false;
+		}
 	}
 }

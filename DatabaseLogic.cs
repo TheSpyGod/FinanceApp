@@ -7,57 +7,93 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 
 namespace FinanceApp
 {
-    public class DatabaseLogic
-    {
+	public class DatabaseLogic
+	{
+		private static DatabaseLogic _instance;
+		private static readonly object _lock = new object();
+		public static DatabaseLogic Instance
+		{
+			get
+			{
+				lock (_lock)
+				{
+					if (_instance == null)
+					{
+						_instance = new DatabaseLogic();
+					}
+					return _instance;
+				}
+			}
+		}
 		public ObservableCollection<FinanceModel> FinanceData { get; private set; } = new ObservableCollection<FinanceModel>();
 		private ObservableCollection<FinanceModel> OriginFinance { get; set; } = new ObservableCollection<FinanceModel>();
-		public ObservableCollection<FinanceModel> CurrencyEx { get; set; } = new ObservableCollection<FinanceModel>();
-		private MongoClient client = new MongoClient("mongodb://127.0.0.1:27017/");
-
+		public ObservableCollection<FinanceModel> CurrencyEx { get; private set; } = new ObservableCollection<FinanceModel>();
+		private MongoClient client;
 		public IMongoCollection<FinanceModel> collection;
 
 		public DatabaseLogic()
 		{
-			FetchData();
+			client = new MongoClient("mongodb://127.0.0.1:27017/");
+			InitializeAsync();
+		}
+
+		private async Task InitializeAsync()
+		{
+			await FetchData();
 		}
 
 		public async Task FetchData()
 		{
-			var database = client.GetDatabase("FinanceApp");
-			collection = database.GetCollection<FinanceModel>("Finance");
-
 			try
 			{
+				var database = client.GetDatabase("FinanceApp");
+				collection = database.GetCollection<FinanceModel>("Finance");
+
 				var data = await collection.Find(_ => true).ToListAsync();
+
+				FinanceData.Clear();
+				OriginFinance.Clear();
+
 				foreach (var item in data)
-				{	
-					if (!FinanceData.Contains(item) && !OriginFinance.Contains(item)) FinanceData.Add(item); OriginFinance.Add(item);
+				{
+					FinanceData.Add(item);
+					OriginFinance.Add(item);
 				}
 			}
-			catch (Exception ex) 
+			catch (Exception ex)
 			{
-				Console.Write(ex.ToString());
+				Console.WriteLine($"Error fetching data: {ex.Message}");
 			}
 		}
 
 		public async Task UpdateDatabase()
 		{
-			foreach (var item in FinanceData)
-			{	
-				if (!OriginFinance.Contains(item)) await collection.InsertOneAsync(item); OriginFinance.Add(item);
-			}
-			foreach (var item in OriginFinance.ToList())			{
-				if (!FinanceData.Contains(item))
+			try
+			{
+				var itemsToAdd = FinanceData.Except(OriginFinance).ToList();
+				var itemsToRemove = OriginFinance.Except(FinanceData).ToList();
+
+				foreach (var item in itemsToAdd)
 				{
-					var filter = Builders<FinanceModel>.Filter.Eq("Id", item.Id); 
+					await collection.InsertOneAsync(item);
+					OriginFinance.Add(item);
+				}
+
+				foreach (var item in itemsToRemove)
+				{
+					var filter = Builders<FinanceModel>.Filter.Eq("Id", item.Id);
 					await collection.DeleteOneAsync(filter);
 					OriginFinance.Remove(item);
 				}
 			}
-		}	
+			catch (Exception ex)
+			{
+				Console.WriteLine($"Error updating database: {ex.Message}");
+			}
+		}
 	}
-	
 }
