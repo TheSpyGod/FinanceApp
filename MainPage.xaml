@@ -2,12 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             xmlns:local="clr-namespace:FinanceApp"
              x:Class="FinanceApp.MainPage"
+             Background="White"
              Title="">
     <StackLayout Margin="0,0,800,0" VerticalOptions="FillAndExpand" >
+        <Label Text="Income"
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           FontSize="24"
+           FontAttributes="Bold"
+           TextColor="Black"
+           BackgroundColor="White"/>
         <micro:ChartView x:Name="chartViewDonut" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <micro:ChartView x:Name="chartViewLine" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
     </StackLayout>
-
-
 </ContentPage>

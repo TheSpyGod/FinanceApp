@@ -4,5 +4,17 @@
         <name>FinanceApp</name>
     </assembly>
     <members>
+        <member name="M:FinanceApp.Manage.#ctor">
+            <summary>
+            This class has two primary functions:
+            a. Manipulates database entries from the connected DatabaseLogic instance.
+               Two collections are created within DatabaseLogic: a user-modifiable one and a copy of it.
+               It compares these collections, generates lists of items for removal and addition, and modifies the database accordingly.
+            b. Exchanges currency based on the selected radio button.
+               A copy of FinanceData (the user-modifiable collection) is created in DatabaseLogic.
+               The due amount of each transaction is converted to the desired currency without altering the original collection.
+               The converted collection is displayed in the ListView instead of the original FinanceData.
+            </summary>
+        </member>
     </members>
 </doc>

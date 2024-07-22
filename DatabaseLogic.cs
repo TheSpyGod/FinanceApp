@@ -67,6 +67,7 @@ namespace FinanceApp
 			catch (Exception ex)
 			{
 				Console.WriteLine($"Error fetching data: {ex.Message}");
+				Console.WriteLine($"Stack Trace: {ex.StackTrace}");
 			}
 		}
 

@@ -2,6 +2,7 @@
 using Microcharts;
 using SkiaSharp;
 using System.Linq;
+using System;
 using System.Collections.Specialized;
 
 namespace FinanceApp
@@ -9,50 +10,73 @@ namespace FinanceApp
 	public partial class MainPage : ContentPage
 	{
 		private DatabaseLogic logic;
-		private bool isUpdating = false;
+		private Manage manage;
 		private List<ChartEntry> entries;
-		public ObservableCollection<FinanceModel> SummationOfDue { get; private set; } = new ObservableCollection<FinanceModel>();
-		private static ThreadLocal<Random> randomWrapper = new ThreadLocal<Random>(() => new Random());
+		public ObservableCollection<FinanceModel> SummationOfIncome { get; private set; } = new ObservableCollection<FinanceModel>();
+		public static class RandomHelper
+		{
+			private static readonly Random random = new Random();
+			private static readonly object randomLock = new object();
+
+			public static int GetRandomNumber(int minValue, int maxValue)
+			{
+				lock (randomLock)
+				{
+					return random.Next(minValue, maxValue);
+				}
+			}
+		}
 		public MainPage()
 		{
 			InitializeComponent();
 			logic = DatabaseLogic.Instance;
+			manage = Manage.Instance;
 			InitializeAsync();
-		}
-		protected override async void OnAppearing()
-		{
-			base.OnAppearing();
 			UpdateGraphs();
 		}
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+			if (Manage.DataHasChanged)
+			{
+				UpdateGraphs();
+				Manage.DataHasChanged = false;
+			}
+		}
+
 		private async Task InitializeAsync()
 		{
 			if (logic.FinanceData.Count == 0) await logic.FetchData();
 		}
 		private SKColor GetRandomColor()
 		{
-			byte[] rgb = new byte[3];
-			randomWrapper.Value.NextBytes(rgb);
-			return new SKColor(rgb[0], rgb[1], rgb[2]);
+			byte r = (byte)RandomHelper.GetRandomNumber(0, 256);		
+			byte g = (byte)RandomHelper.GetRandomNumber(0, 256);
+			byte b = (byte)RandomHelper.GetRandomNumber(0, 256);
+			return new SKColor(r, g, b);
 		}
 
-		public void SumOfDue()
+		public async Task SumOfDue(ObservableCollection<FinanceModel> collection)
 		{
 			var groupedData = logic.FinanceData
+					.Where(item => item.businessType == "Income")
 					.GroupBy(item => item.company)
 					.Select(group => new FinanceModel
 					{
 						company = group.Key,
 						due = group.Sum(item => item.due),
-						businessType = group.First().businessType 	
 					});
-			SummationOfDue.Clear();
-			foreach (var item in groupedData)
+			await MainThread.InvokeOnMainThreadAsync(() =>
 			{
-				SummationOfDue.Add(item);
-			}
+				collection.Clear();
+				foreach (var item in groupedData)
+				{
+					collection.Add(item);
+				}
+			});
 		}
 
-		private void ConvertToEntries()
+		private void ConvertToEntries(ObservableCollection<FinanceModel> collection)
 		{
 			if (entries == null)
 			{
@@ -62,40 +86,40 @@ namespace FinanceApp
 			{
 				entries.Clear();
 			}
-			foreach (var item in SummationOfDue)
+			foreach (var item in collection)
+			{
 				{
-					SKColor color = GetRandomColor();
-					entries.Add(new ChartEntry((float)item.due) {
+					entries.Add(new ChartEntry((float)item.due)
+					{
 						Label = item.company,
 						ValueLabel = item.due.ToString(),
-						Color = color,
+						Color = GetRandomColor(),
 					});
 				}
+			}
 		}
 
-		public void UpdateGraphs()
+		public async Task UpdateGraphs()
 		{
-			if (isUpdating) return;
+			await SumOfDue(SummationOfIncome);
+			ConvertToEntries(SummationOfIncome);
 
-			isUpdating = true;
-			SumOfDue();
-			ConvertToEntries();
-
-			chartViewDonut.Chart = new DonutChart
+			await MainThread.InvokeOnMainThreadAsync(() =>
 			{
-				IsAnimated = true,
-				AnimationDuration = TimeSpan.FromSeconds(2),
-				Entries = entries
-			};
+				chartViewDonut.Chart = new DonutChart
+				{
+					IsAnimated = true,
+					AnimationDuration = TimeSpan.FromSeconds(2),
+					Entries = entries
+				};
 
-			chartViewLine.Chart = new LineChart
-			{
-				IsAnimated = true,
-				AnimationDuration = TimeSpan.FromSeconds(2),
-				Entries = entries
-			};
-
-			isUpdating = false;
+				chartViewLine.Chart = new LineChart
+				{
+					IsAnimated = true,
+					AnimationDuration = TimeSpan.FromSeconds(2),
+					Entries = entries
+				};
+			});
 		}
 	}
 }

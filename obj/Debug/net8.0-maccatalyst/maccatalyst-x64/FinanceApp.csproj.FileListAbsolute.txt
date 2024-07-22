@@ -4,6 +4,7 @@ D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.pd
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\AWSSDK.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\AWSSDK.SecurityToken.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\DnsClient.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microcharts.Maui.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -24,6 +25,10 @@ D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\MongoDB.Drive
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\MongoDB.Driver.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\MongoDB.Libmongocrypt.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SharpCompress.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.iOS.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.Maui.Controls.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.Maui.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Snappier.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\ZstdSharp.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\ar\Microsoft.Maui.Controls.resources.dll
@@ -60,6 +65,7 @@ D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\vi\Microsoft.
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\zh-HK\Microsoft.Maui.Controls.resources.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\zh-Hans\Microsoft.Maui.Controls.resources.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\zh-Hant\Microsoft.Maui.Controls.resources.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\libSkiaSharp.framework.zip
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.CSharp.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.VisualBasic.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.VisualBasic.dll
@@ -302,6 +308,7 @@ D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.Ge
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.AssemblyInfoInputs.cache
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.AssemblyInfo.cs
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.csproj.CoreCompileInputs.cache
+D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.sourcelink.json
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\XamlC.stamp
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.csproj.Up2Date
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.dll
@@ -309,10 +316,3 @@ D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\refint\Financ
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.pdb
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\FinanceApp.genruntimeconfig.cache
 D:\Project\FinanceApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\FinanceApp.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microcharts.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microcharts.Maui.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.iOS.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.Maui.Controls.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.Maui.Core.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\libSkiaSharp.framework.zip

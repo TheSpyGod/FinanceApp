@@ -9,6 +9,7 @@ D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifes
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AWSSDK.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AWSSDK.SecurityToken.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DnsClient.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microcharts.Maui.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -46,6 +47,10 @@ D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MongoDB.Dri
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MongoDB.Driver.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MongoDB.Libmongocrypt.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SharpCompress.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Controls.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Core.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Windows.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Snappier.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZstdSharp.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
@@ -85,6 +90,7 @@ D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hant\Mic
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\mongocrypt.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\libSkiaSharp.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.csproj.AssemblyReference.cache
@@ -108,11 +114,6 @@ D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
-D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
-D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
@@ -159,11 +160,17 @@ D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
+D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
+D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
+D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
+D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
+D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.outputs
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.AssemblyInfoInputs.cache
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.AssemblyInfo.cs
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.csproj.CoreCompileInputs.cache
+D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.sourcelink.json
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.csproj.Up2Date
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.dll
@@ -187,10 +194,3 @@ D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microcharts.Maui.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Controls.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Core.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Windows.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\libSkiaSharp.dll
-D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.sourcelink.json

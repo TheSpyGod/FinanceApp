@@ -4,6 +4,7 @@ D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\FinanceApp.pdb
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\AWSSDK.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\AWSSDK.SecurityToken.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\DnsClient.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microcharts.Maui.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -24,6 +25,10 @@ D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\MongoDB.Driver.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\MongoDB.Driver.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\MongoDB.Libmongocrypt.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SharpCompress.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.Views.iOS.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.Views.Maui.Controls.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.Views.Maui.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Snappier.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\ZstdSharp.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\ar\Microsoft.Maui.Controls.resources.dll
@@ -60,6 +65,10 @@ D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\vi\Microsoft.Maui.Co
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\zh-HK\Microsoft.Maui.Controls.resources.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\zh-Hans\Microsoft.Maui.Controls.resources.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\zh-Hant\Microsoft.Maui.Controls.resources.dll
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Info.plist
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\module.modulemap
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\CodeResources
+D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\libSkiaSharp
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.CSharp.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.VisualBasic.Core.dll
 D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.VisualBasic.dll
@@ -314,6 +323,7 @@ D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.Generated
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.AssemblyInfoInputs.cache
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.AssemblyInfo.cs
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.csproj.CoreCompileInputs.cache
+D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.sourcelink.json
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\XamlC.stamp
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.csproj.Up2Date
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.dll
@@ -321,14 +331,3 @@ D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\refint\FinanceApp.dl
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.pdb
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\FinanceApp.genruntimeconfig.cache
 D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\ref\FinanceApp.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microcharts.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Microcharts.Maui.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.Views.iOS.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.Views.Maui.Controls.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\SkiaSharp.Views.Maui.Core.dll
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\Info.plist
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\module.modulemap
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\CodeResources
-D:\Project\FinanceApp\bin\Debug\net8.0-ios\iossimulator-x64\libSkiaSharp
-D:\Project\FinanceApp\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature

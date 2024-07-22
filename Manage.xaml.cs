@@ -11,10 +11,32 @@ using System.Collections.Specialized;
 namespace FinanceApp;
 
 public partial class Manage : ContentPage
-{	
+{
+
+	private static Manage _instance;
+	private static readonly object _lock = new object();
+
+	public static Manage Instance
+	{
+		get
+		{
+			lock (_lock)
+			{
+				if (_instance == null)
+				{
+					_instance = new Manage();
+				}
+				return _instance;
+			}
+		}
+	}
+
 	private DatabaseLogic logic;
 	private const double ExchangeRatePLN = 0.23;
 	private const double ExchangeRateEUR = 4.30;
+
+	public static bool DataHasChanged { get; set; } = false;
+
 	/// <summary>
 	/// This class has two primary functions:
 	/// a. Manipulates database entries from the connected DatabaseLogic instance.
@@ -30,7 +52,6 @@ public partial class Manage : ContentPage
 		InitializeComponent();
 		logic = DatabaseLogic.Instance;
 		this.BindingContext = logic;
-		logic.FinanceData.CollectionChanged += OnFinanceDataChanged;
 	}
 
 	private void BtnFetch_Clicked(object sender, EventArgs e)
@@ -58,23 +79,21 @@ public partial class Manage : ContentPage
 			Lv.ItemsSource = logic.FinanceData;
 			Company.Text = "";
 			Due.Text = "";
-			MessagingCenter.Send(this, "UpdateGraphs");
+			DataHasChanged = true;
 		}
 	}
 	private void BtnDelete_Clicked(object sender, EventArgs e)
 	{
 		if (Lv.SelectedItem is FinanceModel selection)
 		{
-			logic.FinanceData.Remove(selection); 
-			MessagingCenter.Send(this, "UpdateGraphs");
-
+			logic.FinanceData.Remove(selection);
+			DataHasChanged = true;
 		}
 	}
 
 	private async void BtnUpdate_Clicked(object sender, EventArgs e)
 	{
 		await logic.UpdateDatabase();
-		MessagingCenter.Send(this, "UpdateGraphs");
 	}
 
 	private void CurrencyExchange(string CurrencyState)
@@ -112,9 +131,5 @@ public partial class Manage : ContentPage
 	private void PLNtoEUR_CheckedChanged(object sender, CheckedChangedEventArgs e)
 	{
 		CurrencyExchange(PLNtoEUR.IsChecked ? "EUR" : "PLN");
-	}
-	private void OnFinanceDataChanged(object sender, NotifyCollectionChangedEventArgs e)
-	{
-		MessagingCenter.Send(this, "UpdateGraphs");
 	}
 }

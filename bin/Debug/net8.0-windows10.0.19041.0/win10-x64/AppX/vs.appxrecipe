@@ -29,25 +29,25 @@
     <AppXManifest Include="D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-20T20:47:59.267</Modified>
+      <Modified>2024-07-21T14:27:52.123</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-18T14:49:44.889</Modified>
+      <Modified>2024-07-21T14:12:24.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.runtimeconfig.json">
       <PackagePath>FinanceApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-07-18T14:49:44.766</Modified>
+      <Modified>2024-07-21T14:12:52.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.dll">
       <PackagePath>FinanceApp.dll</PackagePath>
-      <Modified>2024-07-20T20:47:58.153</Modified>
+      <Modified>2024-07-21T14:27:51.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FinanceApp.exe</PackagePath>
-      <Modified>2024-07-20T20:47:58.310</Modified>
+      <Modified>2024-07-21T14:27:51.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -55,23 +55,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:50.400</Modified>
+      <Modified>2024-07-21T14:12:21.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:50.412</Modified>
+      <Modified>2024-07-21T14:12:21.660</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:50.428</Modified>
+      <Modified>2024-07-21T14:12:21.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:50.454</Modified>
+      <Modified>2024-07-21T14:12:21.703</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:50.563</Modified>
+      <Modified>2024-07-21T14:12:21.799</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -83,211 +83,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.098</Modified>
+      <Modified>2024-07-21T14:12:22.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.098</Modified>
+      <Modified>2024-07-21T14:12:22.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.098</Modified>
+      <Modified>2024-07-21T14:12:22.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.098</Modified>
+      <Modified>2024-07-21T14:12:22.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.100</Modified>
+      <Modified>2024-07-21T14:12:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.099</Modified>
+      <Modified>2024-07-21T14:12:22.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.098</Modified>
+      <Modified>2024-07-21T14:12:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.098</Modified>
+      <Modified>2024-07-21T14:12:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.097</Modified>
+      <Modified>2024-07-21T14:12:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.096</Modified>
+      <Modified>2024-07-21T14:12:22.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.095</Modified>
+      <Modified>2024-07-21T14:12:22.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.094</Modified>
+      <Modified>2024-07-21T14:12:22.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-07-18T14:29:52.094</Modified>
+      <Modified>2024-07-21T14:12:22.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\FinanceApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\FinanceApp.deps.json">
       <PackagePath>FinanceApp.deps.json</PackagePath>
-      <Modified>2024-07-18T14:49:44.758</Modified>
+      <Modified>2024-07-21T14:12:52.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gabe\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
