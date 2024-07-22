@@ -1,34 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Project\\FinanceApp\\",
+  "WorkspaceRootPath": "C:\\git\\FinanceApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|d:\\project\\financeapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|c:\\git\\financeapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|d:\\project\\financeapp\\databaselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:databaselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|d:\\project\\financeapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|d:\\project\\financeapp\\manage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|c:\\git\\financeapp\\manage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:manage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|d:\\project\\financeapp\\manage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:manage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|d:\\project\\financeapp\\financemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:financemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|d:\\project\\financeapp\\ifinancedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:ifinancedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|c:\\git\\financeapp\\databaselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{054409E4-FA08-4741-A885-8D60302EFFB8}|FinanceApp.csproj|solutionrelative:databaselogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,22 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\Project\\FinanceApp\\MainPage.xaml",
-              "RelativeDocumentMoniker": "MainPage.xaml",
-              "ToolTip": "D:\\Project\\FinanceApp\\MainPage.xaml",
-              "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-18T13:45:37.604Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -63,78 +33,47 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatabaseLogic.cs",
-              "DocumentMoniker": "D:\\Project\\FinanceApp\\DatabaseLogic.cs",
-              "RelativeDocumentMoniker": "DatabaseLogic.cs",
-              "ToolTip": "D:\\Project\\FinanceApp\\DatabaseLogic.cs",
-              "RelativeToolTip": "DatabaseLogic.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAmwC4AAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-19T13:04:07.41Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "D:\\Project\\FinanceApp\\MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\git\\FinanceApp\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
-              "ToolTip": "D:\\Project\\FinanceApp\\MainPage.xaml.cs",
+              "ToolTip": "C:\\git\\FinanceApp\\MainPage.xaml.cs",
               "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAwwHYAAAAxAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAswDUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T18:14:53.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FinanceModel.cs",
-              "DocumentMoniker": "D:\\Project\\FinanceApp\\FinanceModel.cs",
-              "RelativeDocumentMoniker": "FinanceModel.cs",
-              "ToolTip": "D:\\Project\\FinanceApp\\FinanceModel.cs",
-              "RelativeToolTip": "FinanceModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAAgAAAA",
+              "DocumentIndex": 2,
+              "Title": "DatabaseLogic.cs",
+              "DocumentMoniker": "C:\\git\\FinanceApp\\DatabaseLogic.cs",
+              "RelativeDocumentMoniker": "DatabaseLogic.cs",
+              "ToolTip": "C:\\git\\FinanceApp\\DatabaseLogic.cs",
+              "RelativeToolTip": "DatabaseLogic.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwEIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T18:34:09.948Z"
+              "WhenOpened": "2024-07-19T13:04:07.41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IFinanceData.cs",
-              "DocumentMoniker": "D:\\Project\\FinanceApp\\IFinanceData.cs",
-              "RelativeDocumentMoniker": "IFinanceData.cs",
-              "ToolTip": "D:\\Project\\FinanceApp\\IFinanceData.cs",
-              "RelativeToolTip": "IFinanceData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T18:27:45.611Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Manage.xaml",
-              "DocumentMoniker": "D:\\Project\\FinanceApp\\Manage.xaml",
-              "RelativeDocumentMoniker": "Manage.xaml",
-              "ToolTip": "D:\\Project\\FinanceApp\\Manage.xaml",
-              "RelativeToolTip": "Manage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-15T18:26:20.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Manage.xaml.cs",
-              "DocumentMoniker": "D:\\Project\\FinanceApp\\Manage.xaml.cs",
+              "DocumentMoniker": "C:\\git\\FinanceApp\\Manage.xaml.cs",
               "RelativeDocumentMoniker": "Manage.xaml.cs",
-              "ToolTip": "D:\\Project\\FinanceApp\\Manage.xaml.cs",
+              "ToolTip": "C:\\git\\FinanceApp\\Manage.xaml.cs",
               "RelativeToolTip": "Manage.xaml.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAUwF4AAAABAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAowFIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T18:26:18.39Z"
+              "WhenOpened": "2024-07-15T18:26:18.39Z",
+              "EditorCaption": ""
             }
           ]
         }

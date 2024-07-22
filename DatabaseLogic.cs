@@ -15,21 +15,23 @@ namespace FinanceApp
 	{
 		private static DatabaseLogic _instance;
 		private static readonly object _lock = new object();
-		public static DatabaseLogic Instance
-		{
-			get
-			{
-				lock (_lock)
-				{
-					if (_instance == null)
-					{
-						_instance = new DatabaseLogic();
-					}
-					return _instance;
-				}
-			}
-		}
-		public ObservableCollection<FinanceModel> FinanceData { get; private set; } = new ObservableCollection<FinanceModel>();
+        private static bool _initialized = false;
+        private static Task _initializationTask;
+        public static async Task<DatabaseLogic> GetInstanceAsync()
+        {
+            lock (_lock)
+            {
+                if (_instance == null)
+                {
+                    _instance = new DatabaseLogic();
+                    _initializationTask = _instance.FetchData();
+                }
+            }
+
+            await _initializationTask;
+            return _instance;
+        }
+        public ObservableCollection<FinanceModel> FinanceData { get; private set; } = new ObservableCollection<FinanceModel>();
 		private ObservableCollection<FinanceModel> OriginFinance { get; set; } = new ObservableCollection<FinanceModel>();
 		public ObservableCollection<FinanceModel> CurrencyEx { get; private set; } = new ObservableCollection<FinanceModel>();
 		private MongoClient client;
@@ -38,12 +40,6 @@ namespace FinanceApp
 		public DatabaseLogic()
 		{
 			client = new MongoClient("mongodb://127.0.0.1:27017/");
-			InitializeAsync();
-		}
-
-		private async Task InitializeAsync()
-		{
-			await FetchData();
 		}
 
 		public async Task FetchData()

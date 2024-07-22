@@ -44925,24 +44925,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabe\\.nuget\\packages\\": {},
-    "D:\\Shared\\NuGetPackages": {}
+    "C:\\Users\\agnie\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\FinanceApp\\FinanceApp.csproj",
+      "projectUniqueName": "C:\\git\\FinanceApp\\FinanceApp.csproj",
       "projectName": "FinanceApp",
-      "projectPath": "D:\\Project\\FinanceApp\\FinanceApp.csproj",
-      "packagesPath": "C:\\Users\\Gabe\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\FinanceApp\\obj\\",
+      "projectPath": "C:\\git\\FinanceApp\\FinanceApp.csproj",
+      "packagesPath": "C:\\Users\\agnie\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\FinanceApp\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "D:\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\agnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

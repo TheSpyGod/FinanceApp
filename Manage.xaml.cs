@@ -50,8 +50,13 @@ public partial class Manage : ContentPage
 	public Manage()
 	{
 		InitializeComponent();
-		logic = DatabaseLogic.Instance;
+		InitializeAsync();
 		this.BindingContext = logic;
+	}
+
+	private async Task InitializeAsync()
+	{
+		if (logic == null) logic = await DatabaseLogic.GetInstanceAsync();
 	}
 
 	private void BtnFetch_Clicked(object sender, EventArgs e)

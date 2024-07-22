@@ -1,1 +1,1 @@
-D:\Project\FinanceApp\FinanceApp.csproj;x64
+C:\git\FinanceApp\FinanceApp.csproj;x64

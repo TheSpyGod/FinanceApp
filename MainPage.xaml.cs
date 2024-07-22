@@ -11,7 +11,7 @@ namespace FinanceApp
 	{
 		private DatabaseLogic logic;
 		private Manage manage;
-		private List<ChartEntry> entries;
+		private List<ChartEntry> entries = new List<ChartEntry>();
 		public ObservableCollection<FinanceModel> SummationOfIncome { get; private set; } = new ObservableCollection<FinanceModel>();
 		public static class RandomHelper
 		{
@@ -29,24 +29,22 @@ namespace FinanceApp
 		public MainPage()
 		{
 			InitializeComponent();
-			logic = DatabaseLogic.Instance;
-			manage = Manage.Instance;
-			InitializeAsync();
-			UpdateGraphs();
+			InitializeApp().ConfigureAwait(false);
 		}
-		protected override void OnAppearing()
+		private async Task InitializeApp()
+		{
+			logic = await DatabaseLogic.GetInstanceAsync();
+			manage = Manage.Instance;
+			await UpdateGraphs();
+		}
+		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
-			if (Manage.DataHasChanged)
+            if (Manage.DataHasChanged)
 			{
-				UpdateGraphs();
+				await UpdateGraphs();
 				Manage.DataHasChanged = false;
 			}
-		}
-
-		private async Task InitializeAsync()
-		{
-			if (logic.FinanceData.Count == 0) await logic.FetchData();
 		}
 		private SKColor GetRandomColor()
 		{
@@ -78,14 +76,7 @@ namespace FinanceApp
 
 		private void ConvertToEntries(ObservableCollection<FinanceModel> collection)
 		{
-			if (entries == null)
-			{
-				entries = new List<ChartEntry>();
-			}
-			else
-			{
-				entries.Clear();
-			}
+			entries.Clear();
 			foreach (var item in collection)
 			{
 				{
