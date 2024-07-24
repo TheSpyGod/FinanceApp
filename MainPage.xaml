@@ -6,15 +6,34 @@
              x:Class="FinanceApp.MainPage"
              Background="White"
              Title="">
-    <StackLayout Margin="0,0,800,0" VerticalOptions="FillAndExpand" >
-        <Label Text="Income"
-           HorizontalOptions="Center"
-           VerticalOptions="Start"
-           FontSize="24"
-           FontAttributes="Bold"
-           TextColor="Black"
-           BackgroundColor="White"/>
-        <micro:ChartView x:Name="chartViewDonut" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-        <micro:ChartView x:Name="chartViewLine" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Column="0" Margin="0,0,20,0" VerticalOptions="FillAndExpand">
+            <Label Text="Income"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   BackgroundColor="White"/>
+            <micro:ChartView x:Name="chartViewDonut" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <micro:ChartView x:Name="chartViewLine" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Grid.Column="1" Margin="0,0,0,0" VerticalOptions="FillAndExpand">
+            <Label Text="Expense"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   BackgroundColor="White"/>
+            <micro:ChartView x:Name="chartViewDonutExpense" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <micro:ChartView x:Name="chartViewLineExpense" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+    </Grid>
 </ContentPage>

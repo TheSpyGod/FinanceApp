@@ -5,18 +5,28 @@
              x:Class="FinanceApp.Manage"
              Title=""
              BackgroundColor="#55AAFFFF">
+
     <ContentPage.BindingContext>
         <local:DatabaseLogic/>
     </ContentPage.BindingContext>
-    
-    <Grid>
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Entry x:Name="Company" Placeholder="Company Name" TextTransform="Uppercase" PlaceholderColor="#fffffff0" TextColor="#ffffff" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="350, 0, 50, 600"/>
-        <Picker x:Name="BusinessType" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="350, 0, 50,500">
+        <!-- Input fields and pickers -->
+        <Entry x:Name="Company" Placeholder="Company Name" TextTransform="Uppercase" PlaceholderColor="#fffffff0" TextColor="#ffffff" Grid.Row="0" Grid.Column="0" HeightRequest="50" HorizontalOptions="FillAndExpand"/>
+        <Picker x:Name="BusinessType" Grid.Row="1" Grid.Column="0" HeightRequest="50" HorizontalOptions="FillAndExpand">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Income</x:String>
@@ -24,8 +34,8 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <Entry x:Name="Due" Placeholder="Due Price" Keyboard="Numeric" PlaceholderColor="#fffffff0" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="350, 0, 50, 400"/>
-         <Picker x:Name="Currency" Grid.Row="1"  Grid.Column="0" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" Margin="150, 0, 50,500">
+        <Entry x:Name="Due" Placeholder="Due Price" Keyboard="Numeric" PlaceholderColor="#fffffff0" Grid.Row="2" Grid.Column="0" HeightRequest="50" HorizontalOptions="FillAndExpand"/>
+        <Picker x:Name="Currency" Grid.Row="3" Grid.Column="0" HeightRequest="50" HorizontalOptions="FillAndExpand">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>PLN</x:String>
@@ -34,34 +44,35 @@
             </Picker.ItemsSource>
         </Picker>
 
+        <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Spacing="10" HorizontalOptions="FillAndExpand">
+            <Button Text="Add" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnFetch" WidthRequest="65" HeightRequest="40" Clicked="BtnFetch_Clicked"/>
+            <Button Text="Delete" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnDelete" WidthRequest="85" HeightRequest="40" Clicked="BtnDelete_Clicked"/>
+            <Button Text="Update" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnUpdate" WidthRequest="85" HeightRequest="40" Clicked="BtnUpdate_Clicked"/>
+        </HorizontalStackLayout>
 
-        <Button Text="Add" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnFetch" WidthRequest="65" HeightRequest="40" Margin="200,0,0,250" Clicked="BtnFetch_Clicked"/>
-        <Button Text="Delete" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnDelete" WidthRequest="85" HeightRequest="40" Margin="0,0,0,250" Clicked="BtnDelete_Clicked"/>
-        <Button Text="Update" TextColor="#ffffff" BorderWidth="2" BorderColor="#ffffff" BackgroundColor="#00000000" x:Name="BtnUpdate" WidthRequest="85" HeightRequest="40" Margin="400,0,0,250" Clicked="BtnUpdate_Clicked"/>
-
-        <StackLayout Margin="550, 50, 0, 0">
+        <StackLayout Grid.Row="5" Grid.Column="0" Orientation="Horizontal" Spacing="10">
             <RadioButton x:Name="PLNtoEUR" CheckedChanged="PLNtoEUR_CheckedChanged" Content="EUR" GroupName="CurrencyEx_XAML"/>
             <RadioButton x:Name="EURtoPLN" CheckedChanged="PLNtoEUR_CheckedChanged" Content="PLN" GroupName="CurrencyEx_XAML"/>
         </StackLayout>
-        
-        <ListView x:Name="Lv"  ItemsSource="{Binding FinanceData}" Margin="10" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" WidthRequest="500" HorizontalOptions="EndAndExpand"  VerticalOptions="Start">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Frame Background="#000000ff">
-                        <HorizontalStackLayout Spacing="8">
-                            <VerticalStackLayout>
-                                <Label Text="{Binding company}" FontSize="25"/>
-                                <Label Text="{Binding due}" FontSize="25"/>
-                                <Label Text="{Binding businessType}" FontSize="25"/>
-                                <Label Text="{Binding currency}" FontSize="25"/>
-                                <Label Text="{Binding date}" FontSize="25"/>
-                            </VerticalStackLayout>
-                        </HorizontalStackLayout>    
-                    </Frame>
-                 </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+
+        <ListView x:Name="Lv" ItemsSource="{Binding FinanceData}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Background="#000000ff">
+                            <HorizontalStackLayout Spacing="8">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding company}" FontSize="25"/>
+                                    <Label Text="{Binding due}" FontSize="25"/>
+                                    <Label Text="{Binding businessType}" FontSize="25"/>
+                                    <Label Text="{Binding currency}" FontSize="25"/>
+                                    <Label Text="{Binding date}" FontSize="25"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </ContentPage>

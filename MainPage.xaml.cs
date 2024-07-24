@@ -11,9 +11,13 @@ namespace FinanceApp
 	{
 		private DatabaseLogic logic;
 		private Manage manage;
-		private List<ChartEntry> entries = new List<ChartEntry>();
-		public ObservableCollection<FinanceModel> SummationOfIncome { get; private set; } = new ObservableCollection<FinanceModel>();
-		public static class RandomHelper
+		private List<ChartEntry> IncomeEntries = new List<ChartEntry>();
+		private List<ChartEntry> ExpenseEntries = new List<ChartEntry>();
+		private ObservableCollection<FinanceModel> SummationOfIncome { get; set; } = new ObservableCollection<FinanceModel>();
+		private ObservableCollection<FinanceModel> SummationOfExpense { get; set; } = new ObservableCollection<FinanceModel>();
+        private const double ExchangeRatePLN = 0.23;
+        private const double ExchangeRateEUR = 4.30;
+        public static class RandomHelper
 		{
 			private static readonly Random random = new Random();
 			private static readonly object randomLock = new object();
@@ -48,13 +52,13 @@ namespace FinanceApp
 		}
 		private SKColor GetRandomColor()
 		{
-			byte r = (byte)RandomHelper.GetRandomNumber(0, 256);		
+			byte r = (byte)RandomHelper.GetRandomNumber(0, 256);
 			byte g = (byte)RandomHelper.GetRandomNumber(0, 256);
 			byte b = (byte)RandomHelper.GetRandomNumber(0, 256);
 			return new SKColor(r, g, b);
 		}
 
-		public async Task SumOfDue(ObservableCollection<FinanceModel> collection)
+		private async Task SumOfDueIncome(ObservableCollection<FinanceModel> collection)
 		{
 			var groupedData = logic.FinanceData
 					.Where(item => item.businessType == "Income")
@@ -62,7 +66,7 @@ namespace FinanceApp
 					.Select(group => new FinanceModel
 					{
 						company = group.Key,
-						due = group.Sum(item => item.due),
+						due = group.Sum(item => item.currency == "EUR" ? item.due * ExchangeRateEUR : item.due),
 					});
 			await MainThread.InvokeOnMainThreadAsync(() =>
 			{
@@ -74,7 +78,26 @@ namespace FinanceApp
 			});
 		}
 
-		private void ConvertToEntries(ObservableCollection<FinanceModel> collection)
+		private async Task SumOfDueExpense(ObservableCollection<FinanceModel> collection)
+		{
+				var groupedData = logic.FinanceData
+					.Where(item => item.businessType == "Expense")
+					.GroupBy(item => item.company)
+					.Select(group => new FinanceModel
+					{
+						company = group.Key,
+						due = group.Sum(item => item.currency == "EUR" ? item.due * ExchangeRateEUR : item.due),
+					});
+			await MainThread.InvokeOnMainThreadAsync(() =>
+			{
+				collection.Clear();
+				foreach (var item in groupedData)
+				{
+					collection.Add(item);
+				}
+			});
+		}
+		private void ConvertToEntries(ObservableCollection<FinanceModel> collection, List<ChartEntry> entries)
 		{
 			entries.Clear();
 			foreach (var item in collection)
@@ -89,11 +112,12 @@ namespace FinanceApp
 				}
 			}
 		}
-
 		public async Task UpdateGraphs()
 		{
-			await SumOfDue(SummationOfIncome);
-			ConvertToEntries(SummationOfIncome);
+			await SumOfDueIncome(SummationOfIncome);
+			ConvertToEntries(SummationOfIncome, IncomeEntries);
+			await SumOfDueExpense(SummationOfExpense);
+			ConvertToEntries(SummationOfExpense, ExpenseEntries);
 
 			await MainThread.InvokeOnMainThreadAsync(() =>
 			{
@@ -101,14 +125,27 @@ namespace FinanceApp
 				{
 					IsAnimated = true,
 					AnimationDuration = TimeSpan.FromSeconds(2),
-					Entries = entries
+					Entries = IncomeEntries
 				};
 
 				chartViewLine.Chart = new LineChart
 				{
 					IsAnimated = true,
 					AnimationDuration = TimeSpan.FromSeconds(2),
-					Entries = entries
+					Entries = IncomeEntries
+				};
+
+				chartViewDonutExpense.Chart = new DonutChart
+				{
+					IsAnimated = true,
+					AnimationDuration = TimeSpan.FromSeconds(2),
+					Entries = ExpenseEntries
+				};
+				chartViewLineExpense.Chart = new LineChart
+				{
+					IsAnimated = true,
+					AnimationDuration= TimeSpan.FromSeconds(2),
+					Entries = ExpenseEntries
 				};
 			});
 		}
